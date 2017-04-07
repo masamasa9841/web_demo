@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">    <!--jaに変更-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; （以後略）-->
+    <title>デモ用ページ</title>   <!--変更-->
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">デモ用ページ</a>   <!--変更-->
+        </div>
+      </div>
+    </nav>
+    <div class="container" style="padding-top:60px">
+      <div class="row">
+        <div class="col-md-4">
+          <h2>LED</h2>
+          <button type="button" class="btn btn-danger" id="motor_on">ON</button>
+          <button type="button" class="btn btn-primary" id="motor_off">OFF</button>
+        </div>
+        <div class="col-md-4">
+          <h2>Camera</h2>
+          <div id="LiveImg">ここに映像</div>
+        </div>
+        <div class="col-md-4">
+          <h2><div id="state">LED(音声認識)</div></h2>
+          <p>*chromeしか動かない</p>
+          <input type="button" class="btn btn-danger" id="voice_on" value="開始" onclick="recognition.start();"/>
+          <input type="button" class="btn btn-primary" id="voice_off" value="終了" onclick="recognition.stop();"/>
+          <table class="table table-striped">
+            <tr><td>認識結果</td><td id="recognizedText"></td></tr>
+          </table>
+        </div>
+        <div class="col-md-4">
+          <h2>認識語録</h2>
+          <table class="table table-striped">
+            <tr><th>認識(US)</th><th>結果</th></tr>
+            <tr><td>Japanese</td><td>on</td></tr>
+            <tr><td>English</td><td>of</td></tr>
+            <tr><td>n(数字)</td><td>n回点滅</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
